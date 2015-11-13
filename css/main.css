@@ -57,8 +57,8 @@ textarea {
    ========================================================================== */
 
 .simon {
-    width: 600px;
-    height: 600px;
+    width: 300px;
+    height: 300px;
     overflow: hidden;
     margin: auto;
     position: absolute;
@@ -69,10 +69,12 @@ textarea {
 }
 
 .panel {
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     background-color: #999;
     float: left;
+    text-align: center;
+    line-height: 150px;
 }
 
 .panel.light {
@@ -93,16 +95,16 @@ textarea {
 }
 
 .panel:nth-of-type(1) {
-    border-top-left-radius: 300px;
+    border-top-left-radius: 150px;
 }
 .panel:nth-of-type(2) {
-    border-top-right-radius: 300px;
+    border-top-right-radius: 150px;
 }
 .panel:nth-of-type(3) {
-    border-bottom-left-radius: 300px;
+    border-bottom-left-radius: 150px;
 }
 .panel:nth-of-type(4) {
-    border-bottom-right-radius: 300px;
+    border-bottom-right-radius: 150px;
 }
 
 
