@@ -54,12 +54,47 @@ var gameover = function(message) {
 };
 
 
+// Setup an index for flashing
+var i = 0;
+var timer; // global so we can clear it
+
+// Flash one panel and move the index
+var flashpanels = function() {
+	
+	// Flash each of the colours in sequence
+	$('.panel[data-color="' + pattern[i] + '"]')
+		.fadeOut(100)
+		.fadeIn(100);
+
+	// Increase the array index value
+	i++;
+
+	// If we don't have any more panels to flash, stop the flasher
+	if (i >= pattern.length) {
+		clearInterval(timer); // stop timer
+		i = 0; // Setup index at 0 for next time
+	}
+};
+
+
+// Generate a new value for our array
+var generatenewpanel = function() {
+
+	// Add new value to sequence
+	// COMPLETE IN WEEK 13
+	
+
+	// Setup a timer that runs every 200 ms that will flash the panel
+	timer = setInterval(flashpanels, 200);
+};
+
+
+
+
+// DOCUMENT IS READY:
+
 // When a panel gets clicked, call the clickpanel function()
 $('.panel').on('click', clickpanel);
-
-
-
-
 
 
 
